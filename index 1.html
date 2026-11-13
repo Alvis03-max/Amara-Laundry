@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Amara Laundry Services</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="container">
+    <div class="info">
+      <span><i class="fa-solid fa-envelope"></i><a href="mailto:info@amara.co.ke">info@amara.co.ke</a></span>
+      <span><i class="fa-solid fa-phone"></i><a href="tel:+254768466340">+254768466340</a></span>
+      <span><i class="fa-solid fa-location-dot"></i>Kutus, Kirinyaga</span>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="https://wa.me/254768466340" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <a href="#home" class="brand"><i class="fa-solid fa-shirt"></i>Amara Laundry Services</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HOME -->
+<section class="hero" id="home">
+  <div class="container">
+    <h1>Fresh, Clean &amp; Perfectly Folded</h1>
+    <p>Professional laundry, dry cleaning and ironing in Kutus, Kirinyaga. Book a pickup and let us handle the rest.</p>
+    <a href="#booking" class="btn">Book a Service</a>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <div class="title"><h2>Our Services</h2><span></span></div>
+    <div class="grid">
+      <div class="card"><i class="fa-solid fa-soap"></i><h3>Wash &amp; Fold</h3><p>Everyday laundry washed, dried and neatly folded.</p></div>
+      <div class="card"><i class="fa-solid fa-user-tie"></i><h3>Dry Cleaning</h3><p>Careful cleaning for suits, dresses and delicate fabrics.</p></div>
+      <div class="card"><i class="fa-solid fa-temperature-high"></i><h3>Ironing &amp; Pressing</h3><p>Crisp, wrinkle-free clothes ready to wear.</p></div>
+      <div class="card"><i class="fa-solid fa-bed"></i><h3>Bedding &amp; Curtains</h3><p>Blankets, duvets, bed sheets and curtains made fresh.</p></div>
+      <div class="card"><i class="fa-solid fa-truck-fast"></i><h3>Pickup &amp; Delivery</h3><p>We collect and deliver right to your doorstep.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="container">
+    <div class="title"><h2>Book Laundry Service</h2><span></span></div>
+    <form class="booking-form" id="bookingForm" novalidate>
+      <div class="form-row">
+        <div class="field"><label for="name">Full Name</label><input type="text" id="name" placeholder="Your name"><small class="error">Please enter your name.</small></div>
+        <div class="field"><label for="phone">Phone Number</label><input type="tel" id="phone" placeholder="07XXXXXXXX"><small class="error">Enter a valid phone number.</small></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="email">Email (optional)</label><input type="email" id="email" placeholder="you@example.com"></div>
+        <div class="field"><label for="service">Service</label>
+          <select id="service">
+            <option value="">-- Select service --</option>
+            <option>Wash &amp; Fold</option>
+            <option>Dry Cleaning</option>
+            <option>Ironing &amp; Pressing</option>
+            <option>Bedding &amp; Curtains</option>
+          </select><small class="error">Please select a service.</small></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="date">Pickup Date</label><input type="date" id="date"><small class="error">Choose today or a future date.</small></div>
+        <div class="field"><label for="time">Pickup Time</label>
+          <select id="time">
+            <option value="">-- Select time --</option>
+            <option>8:00 AM - 10:00 AM</option>
+            <option>10:00 AM - 12:00 PM</option>
+            <option>12:00 PM - 2:00 PM</option>
+            <option>2:00 PM - 5:00 PM</option>
+          </select><small class="error">Please select a time.</small></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="items">Approx. Number of Items / Kgs</label><input type="number" id="items" min="1" value="1"></div>
+        <div class="field"><label for="delivery">Delivery Option</label>
+          <select id="delivery">
+            <option>Pickup &amp; Delivery</option>
+            <option>I will drop off and collect</option>
+          </select></div>
+      </div>
+      <div class="field"><label for="address">Pickup Address</label><input type="text" id="address" placeholder="Estate / street / landmark, Kutus"><small class="error">Please enter your address.</small></div>
+      <div class="field"><label for="notes">Special Instructions</label><textarea id="notes" rows="3" placeholder="e.g. stain on white shirt, starch collars"></textarea></div>
+      <button type="submit" class="btn">Confirm Booking</button>
+      <div class="success" id="success" role="status"></div>
+    </form>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="container">
+    <div class="title"><h2>Customer Reviews</h2><span></span></div>
+    <div class="grid">
+      <div class="card review"><div class="stars">★★★★★</div><p>"My clothes came back spotless and smelling fresh. Delivery was right on time!"</p><h4>Wanjiru K.</h4></div>
+      <div class="card review"><div class="stars">★★★★★</div><p>"Best dry cleaning in Kutus. My suit looks brand new."</p><h4>James M.</h4></div>
+      <div class="card review"><div class="stars">★★★★☆</div><p>"Affordable and reliable. Booking online is so easy."</p><h4>Faith N.</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="title"><h2>Contact Us</h2><span></span></div>
+    <div class="contact-grid">
+      <div class="card"><i class="fa-solid fa-phone"></i><h3>Call Us</h3><p><a href="tel:+254768466340">+254768466340</a></p></div>
+      <div class="card"><i class="fa-solid fa-envelope"></i><h3>Email Us</h3><p><a href="mailto:info@amara.co.ke">info@amara.co.ke</a></p></div>
+      <div class="card"><i class="fa-solid fa-location-dot"></i><h3>Visit Us</h3><p>Kutus, Kirinyaga</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-left">
+        <div class="logo"><i class="fa-solid fa-shirt"></i></div>
+        <h3>Amara Laundry Services</h3>
+        <p><strong>Our Mission:</strong> To give every customer fresh, clean and well-cared-for clothes through reliable, affordable and convenient laundry services.</p>
+        <p><i class="fa-solid fa-envelope"></i>info@amara.co.ke</p>
+        <p><i class="fa-solid fa-phone"></i>+254768466340</p>
+        <p><i class="fa-solid fa-location-dot"></i>Kutus, Kirinyaga</p>
+      </div>
+      <div class="footer-right">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Book Now</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copy">&copy; <span id="year"></span> Amara Laundry Services. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
